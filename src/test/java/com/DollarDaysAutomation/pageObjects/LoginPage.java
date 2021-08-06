@@ -23,9 +23,6 @@ public class LoginPage
 	@FindBy(linkText="Sign In")
 	WebElement signinLink;
 	
-	@FindBy(linkText="Favorites")
-	WebElement favoritesLink;
-	
 	@FindBy(name="username")
 	WebElement txtUserName;
 
@@ -34,7 +31,6 @@ public class LoginPage
 
 	@FindBy(xpath="//button[@class=\"btn\"]")
 	WebElement btnLogin;
-
 
 	public void setUserName(String uname) {
 		txtUserName.sendKeys(uname);
@@ -63,9 +59,5 @@ public class LoginPage
 	{
 		signinLink.click();
 	}
-	public void clickFavoritesLink()
-	{
-		favoritesLink.click();
-	}
-
+	
 }

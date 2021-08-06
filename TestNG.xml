@@ -8,10 +8,11 @@
 <test name="DollarDaysAutomation Test">
 <parameter name="browser" value="chrome"/>
 <classes>
- <class name="com.DollarDaysAutomation.testCases.TC_LoginTest_001"/>
- <!--<class name="com.DollarDaysAutomation.testCases.TC_AddCustomerTest_003"/>
 
-   <class name="com.DollarDaysAutomation.testCases.TC_LoginDDT_002"/>
+<class name="com.DollarDaysAutomation.testCases.TC_AddFavorites_002"/>
+
+   <!-- <class name="com.DollarDaysAutomation.testCases.TC_LoginDDT_002"/>
+    <class name="com.DollarDaysAutomation.testCases.TC_LoginTest_001"/>
   -->
 </classes>
 

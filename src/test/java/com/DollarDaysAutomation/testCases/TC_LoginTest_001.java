@@ -16,17 +16,17 @@ import com.DollarDaysAutomation.pageObjects.LoginPage;
 public class TC_LoginTest_001 extends BaseClass
 
 {
-		Logger logger = Logger.getLogger(TC_LoginTest_001.class.getName());
-		public TC_LoginTest_001() {
-			PropertyConfigurator.configure("log4j.properties");
-		}
+	Logger logger = Logger.getLogger(TC_LoginTest_001.class.getName());
+	public TC_LoginTest_001() {
+		PropertyConfigurator.configure("log4j.properties");
+	}
 
 	@Test
 	public void loginTest() throws IOException
 
 	{
 		LoginPage lp=new LoginPage(driver);
-	
+
 		lp.clickSigninImage();
 		lp.clickSigninLink();
 		lp.setUserName(username);
@@ -35,11 +35,12 @@ public class TC_LoginTest_001 extends BaseClass
 		logger.info("entered the password");
 		lp.clickSubmit();
 		logger.info("clicked the login button");
-		//System.out.println(driver.getTitle());
+
 		if(driver.getTitle().equals("DollarDays | Bulk Goods for Nonprofits, Businesses & Schools | Wholesale Products"))
 		{
 			Assert.assertTrue(true);
 			logger.info("Login test passed");
+			
 		}
 		else
 		{
