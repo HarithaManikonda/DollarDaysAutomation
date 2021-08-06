@@ -9,7 +9,7 @@
 <parameter name="browser" value="chrome"/>
 <classes>
 
-<class name="com.DollarDaysAutomation.testCases.TC_RemoveFavorites_003"/>
+<class name="com.DollarDaysAutomation.testCases.TC_AddToCart_004"/>
 
    <!-- <class name="com.DollarDaysAutomation.testCases.TC_LoginDDT_002"/>
     <class name="com.DollarDaysAutomation.testCases.TC_LoginTest_001"/>
