@@ -39,6 +39,9 @@ public class FavoritesPage
 
 	WebElement removeFavorite;
 
+	//div[@class="jqatcform"]//input[@type="button"]
+	
+	
 	//@FindAll(xpath="//*[@id=\"central-content\"]/div[3]/div[1]/div/div")
 	//WebElement
 

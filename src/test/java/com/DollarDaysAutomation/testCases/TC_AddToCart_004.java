@@ -46,6 +46,8 @@ public class TC_AddToCart_004 extends BaseClass
 		//gets the list of items in that selected category
 		List<WebElement> listOfItems=addToCart.getListofItems();
 		
+		//Selecting the first item and redirecting to item page
+	
 		String selectedItem= listOfItems.get(0).getAttribute("href");
 		listOfItems.get(0).click();
 		

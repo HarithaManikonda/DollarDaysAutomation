@@ -17,7 +17,6 @@ public class AddToCartPage
 	WebDriver driver;
 	public AddToCartPage(WebDriver driver)
 	{
-		// TODO Auto-generated constructor stub
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -34,6 +33,12 @@ public class AddToCartPage
 	
 	@FindBy(xpath="//img[@class='header-cart']")
 	WebElement cartIcon;
+	
+	@FindBy(name="picquantity")
+	WebElement noOfCases;
+	
+	@FindBy(xpath="//input[@class='form-quantity']")
+	WebElement noOfCases_cart;
 	
 	public void clickMenuIcon()
 	{
@@ -56,6 +61,11 @@ public class AddToCartPage
 	    cartIcon.click();
 	}
 	
+	public List<WebElement> getAllButtons() {
+		 List<WebElement> listOfAddToCartBtns=driver.findElements(By.xpath("//div[@class='jqatcform']//input[@type='button']"));
+		 return listOfAddToCartBtns;
+	}
+	
 	public List<WebElement> getCartItems()
 	{
 		 List<WebElement> listOfCartItems=driver.findElements(By.xpath("//div[@class='sku_titel']/h4/a"));
@@ -69,8 +79,16 @@ public class AddToCartPage
 		addToCartBtn.sendKeys(Keys.RETURN);
 		
 	}
+	public void getNumberOfCases(String value)
+	{
+		noOfCases.clear();
+		noOfCases.sendKeys(value);
+		
+	}
+	public String getNumberOfCases_cart()
+	{
+		return noOfCases_cart.getAttribute("value");
+	}
 	
-	
-	//*[ text() = 'Add to cart' ]
 
 }
