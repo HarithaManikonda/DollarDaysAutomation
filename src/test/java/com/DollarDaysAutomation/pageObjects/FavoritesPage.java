@@ -18,31 +18,35 @@ public class FavoritesPage
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
-	
+
 	@FindBy(xpath="//img[@class=\"header-user\"]")
 	WebElement signinImg;
-	
+
 	@FindBy(linkText="Favorites")
 	WebElement favoritesLink;
-	
+
 	@FindBy(name="terms")
 	WebElement searchBar;
-	
+
 	@FindBy(xpath="//button[@class=\"btn btn-primary btn-search dd-search\"]")
 	WebElement searchButton;
-	
+
 	@FindBy(xpath="//div[@class='addtofvrt link bold ']")
-	
+
 	WebElement addToFavorites;
-	
+
+	@FindBy(xpath="//div[@class='rmvfromfvrt link bold ']")
+
+	WebElement removeFavorite;
+
 	//@FindAll(xpath="//*[@id=\"central-content\"]/div[3]/div[1]/div/div")
 	//WebElement
-	
+
 	public void clickFavoritesLink()
 	{
 		favoritesLink.click();
 	}
-	
+
 	public void clickSigninImage()
 	{
 		signinImg.click();
@@ -55,7 +59,7 @@ public class FavoritesPage
 	{
 		searchButton.click();
 	}
-	
+
 	public List<WebElement> getSearchResult()
 	{
 		List<WebElement> searchResult= driver.findElements(By.xpath("//div[@class='prod-img']/a"));//.xpath("//*[@id=\\\"central-content\\\"]/div[3]/div[1]/div/div"));
@@ -66,11 +70,16 @@ public class FavoritesPage
 		addToFavorites.click();
 	}
 	
+	public void removeFavorite()
+	{
+		removeFavorite.click();
+	}
+
 	public List<WebElement> getFavoriteList()
 	{
 		List<WebElement> favoriteList= driver.findElements(By.xpath("//div[@class='prod-img']/a"));//.xpath("//*[@id=\\\"central-content\\\"]/div[3]/div[1]/div/div"));
 		return favoriteList;
 	}
-	
-	
+
+
 }

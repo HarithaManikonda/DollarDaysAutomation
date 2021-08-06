@@ -41,7 +41,6 @@ public class TC_AddFavorites_002 extends BaseClass
 
 		// get search results and click and first item
 		List<WebElement> searchResult=fp.getSearchResult();
-		System.out.println(searchResult.size());
 		String favoriteItem=searchResult.get(0).getAttribute("href");
 		searchResult.get(0).click();
 		logger.info("Opened the items to add it to favorites");
@@ -55,18 +54,16 @@ public class TC_AddFavorites_002 extends BaseClass
 		lp.clickSigninImage();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		fp.clickFavoritesLink();
-		System.out.println("Successfully listed the favorite items");
+		logger.info("Successfully listed the favorite items");
 
 		//compare selected favorite with all items in the favorites
 		List<WebElement> favoriteList=fp.getFavoriteList();
-		System.out.println(favoriteList.size());
 		boolean testResult=false;
 		for(WebElement result:favoriteList) 
 		{
-			System.out.println(result.getAttribute("href"));
 			if((result.getAttribute("href")).equals(favoriteItem)) 
 			{
-				System.out.println("Favorite added successfully");
+				logger.info("Favorite added successfully");
 				testResult=true;
 				break;
 			}
