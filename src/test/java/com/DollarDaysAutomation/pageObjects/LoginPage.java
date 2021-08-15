@@ -19,7 +19,6 @@ public class LoginPage
 	
 	@FindBy(xpath="//img[@class=\"header-user\"]")
 	WebElement signinImg;
-	
 	@FindBy(linkText="Sign In")
 	WebElement signinLink;
 	
